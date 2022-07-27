@@ -20,8 +20,9 @@ encodeButton.addEventListener('click', async e => {
             let cypherFile = renderFile(cypher, file.files[0].name + "cypher", file.files[0].type);
             output.href = URL.createObjectURL(cypherFile);
             output.download = "enscript-" + file.files[0].name;
-            output.classList.remove("hide");
-            load.classList.add("hi  de");
+            // output.classList.remove("hide");
+            // load.classList.add("hide");
+            output.click();
         }
         fr.readAsDataURL(file.files[0]);
     }
@@ -45,8 +46,9 @@ decodeButton.addEventListener('click', e => {
                     let dataFile = renderFile(blob, file.files[0].name + "cypher", file.files[0].type);
                     output.href = URL.createObjectURL(dataFile);
                     output.download = "descrypt-" + file.files[0].name;
-                    output.classList.remove("hide");
-                    load.classList.add("hide");
+                    output.click();
+                    // output.classList.remove("hide");
+                    // load.classList.add("hide");
                 });
             } catch (error) {
                 alert("Cannot descrypt with this key");
