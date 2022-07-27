@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="banner">
+        Enscryption
+    </div>
+
+    <div class="screen">
+        <div class="area step-one">
+            <div class="area-group">
+                <div class="area-item area-title">
+                    [Select file]
+                </div>
+                <div class="area-item">
+                    <input id="file" class="file" type="file">
+                </div>
+            </div>
+            <div class="area-group">
+                <div class="area-item area-title">
+                    [Enter key]
+                </div>
+                <div class="area-item">
+                    <input class="key" placeholder="Enter key..">
+                </div>
+            </div>
+            <div class="area-group">
+                <div class="area-item">
+                    <button class="encode-button">Encode</button>
+                </div>
+                <div class="area-item">
+                    <button class="decode-button">Decode</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="area step-two">
+            <div class="scanner">
+                <div class="scanner-layer1 scanner-layer">
+                </div>
+                <div class="scanner-layer2 scanner-layer">
+                    <div class="scanner-bar"></div>
+                </div>
+            </div>
+            <div class="area-title load">[[Please wait..]]</div>
+            <a download="" class="area-title output hide">[Download Output]</a>
+        </div>
+    </div>
+
+    <div class="scan">
+        <div class="scan-layer1 scan-layer"></div>
+        <div class="scan-layer2 scan-layer"></div>
+    </div>
+
+    <div class="cube">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="font"></div>
+        <div class="back"></div>
+        <div class="top"></div>
+        <div class="bot"></div>
+    </div>
+
+    <!-- <div class="typing">
+        <div class="typing-static" data-typing="Typingg">
+            <div class="typing-data">typing</div>
+            <div class="typing-dymanic"></div>
+        </div>
+    </div>
+
+    <div class="text-scanner">
+        <div class="text-layer text-static">typing</div>
+         <div class="text-layer text-dymanic">typing</div> -->
+    <!-- </div> --> 
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./index.js"></script>
+</html>

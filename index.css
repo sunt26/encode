@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --color: #00ce00;
+}
+
+body {
+    color: white;
+    background-color: #000000;
+    /* background: url('./bg.jpg'); */
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+}
+
+.scanner {
+    line-height: 6em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    line-height: 0.7em;
+    -webkit-box-reflect: below 100px linear-gradient(transparent, #0008);
+}
+
+.scanner-layer {
+    width: 200px;
+    height: 200px;
+}
+
+.scanner-layer2 {
+    position: absolute;
+    background: url('./icon/part0.png');
+    background-size: cover;
+    animation: scanner 5s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+}
+
+.scanner-bar {
+    min-width: 120%;
+    background-color: var(--color);
+    border-radius: 5px;
+    height: 5px;
+    position: absolute;
+    top: 100%;
+    box-shadow: 0px 0px 20px 2px var(--color);
+}
+
+.scanner-layer1 {
+    position: relative;
+    background: url('./icon/layer1.png');
+    background-size: cover;
+}
+
+@keyframes scanner {
+    0% {
+        height: 0%;
+    }
+
+    50% {
+        height: 50%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+
+
+
+
+.banner {
+    margin: 0 auto;
+    text-align: center;
+    color: #205375;
+    text-transform: uppercase;
+    font-size: 6em;
+    letter-spacing: 15px;
+    outline: none;
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0008); */
+    animation: banner 4s infinite;
+}
+
+/* .banner-reflect{
+    transform: rotateX(180deg);
+    background-clip: text;
+    line-height: 0.7em;
+    background: ;
+} */
+
+@keyframes banner {
+
+    0%,
+    15%,
+    20%,
+    60%,
+    70%,
+    100% {
+        color: white;
+        text-shadow: 0 0 20px var(--color),
+            0 0 40px var(--color),
+            0 0 60px var(--color);
+    }
+
+    19%,
+    25%,
+    65% {
+        color: #383838;
+        text-shadow: 0 0 20px;
+    }
+}
+
+.area-item button {
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    background: transparent;
+    border: 0.125rem solid var(--color);
+    border-radius: 4px;
+    color: var(--color);
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--color), 0 0 10px var(--color);
+}
+
+button:hover {
+    box-shadow: 0 0 10px var(--color), inset 0 0 10px var(--color);
+}
+
+input:focus {
+    box-shadow: 0 0 10px var(--color);
+}
+
+.area-title {
+    position: relative;
+    color: var(--color);
+    text-shadow: 0 0 20px var(--color), 0 0 20px var(--color);
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent,#0008); */
+}
+
+/* .area-title::after{
+    content: "";
+    position: absolute;
+    right: 30%;
+    top: 0;
+    bottom: 0;  
+    width: 2px;
+    background-color:var(--color);
+    animation: light 1s infinite;
+}
+
+
+@keyframes light {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+.area-item input {
+    /* text-shadow: 0 0 10px var(--color), 0 0 10px var(--color); */
+    color: var(--color);
+    width: 220px;
+    height: 20px;
+    border: 1px solid var(--color);
+    outline: none;
+    border-radius: 4px;
+    padding: 10px;
+    background: inherit;
+}
+
+.area-item input {}
+
+@keyframes line {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.area {
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    padding: 10px;
+    transition: all 0.5s;
+}
+
+.line {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.line-layer1 {
+    border-radius: 10px;
+    position: absolute;
+    width: 200%;
+    height: 50%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: line linear infinite 10s;
+}
+
+.line-layer2 {
+    width: 100%;
+    margin: auto;
+    /* display: flex; */
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    position: absolute;
+    inset: 2px;
+    background-color: inherit;
+}
+
+.area-file .line-layer2 label {
+    cursor: pointer;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.area-file .line-layer2 label p {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #E8F9FD;
+}
+
+.area-file .line-layer2 label img {
+    width: 100px;
+}
+
+.area-file {
+    background-color: #205375;
+    /* display: none; */
+}
+
+.area-title {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 120%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: double;
+}
+
+.area-process {
+    background-color: #205375;
+}
+
+.area-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+}
+
+.area-item {
+    padding: 10px;
+}
+
+
+
+.area-button {
+    width: 200px;
+    height: 60px;
+    /* background: linear-gradient(#00ccff,#d400d4); */
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.area-input {
+    border: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    background: inherit;
+}
+
+.area-group img {
+    width: 100px;
+
+    /* height: 10px; */
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.output .load {
+    transition: all 0.5s;
+}
+
+.screen .step-one {
+    width: 50%;
+}
+
+.screen .step-two {
+    width: 50%;
+}
+
+.screen {
+    display: flex;
+}
+
+
+.cube {
+    top: -340px;
+    margin: auto;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: cube 10s linear infinite;
+}
+
+@keyframes cube {
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515, var(--color));
+    /* transform: rotateY(calc(90deg*var(--i))) translateZ(100px); */
+    /* transform-style: preserve-3d; */
+}
+
+.cube .left {
+    /* background: linear-gradient(#151515,#00ec00); */
+    transform: rotateY(calc(90deg*1)) translateZ(100px);
+}
+
+.cube .right {
+    /* background: linear-gradient(#151515,#00ec00); */
+    transform: rotateY(calc(90deg*3)) translateZ(100px);
+}
+
+.cube .font {
+    /* background: linear-gradient(#151515,#00ec00); */
+    transform: rotateY(calc(90deg*0)) translateZ(100px);
+}
+
+.cube .back {
+    /* background: linear-gradient(#151515,#00ec00); */
+    transform: rotateY(calc(90deg*2)) translateZ(100px);
+}
+
+.cube .top {
+    background: #222 !important;
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube .bot {
+    position: absolute;
+    transform: rotateX(90deg) translateZ(-150px);
+    background: #00ce00 !important;
+    filter: blur(20px);
+    box-shadow: 0 0 100px #00ce00, 0 0 100px #00ce00;
+}
+
+.typing {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+.typing-static{
+    position: relative;
+}
+.typing-dymanic{
+    /* content: ""; */
+    position: absolute;
+    background-color:black;
+    top: 0;
+    bottom: 0;width: 100%;right: 0;animation: typing 2s steps(100) infinite;
+    /* animation-delay: 2s; */
+    /* left: 0;
+    right: 0; */
+}
+.typing-dymanic::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #00ccff;
+    box-shadow: -10px 0 20px 10px var(--color), inset 0 0 10px var(--color);
+}
+@keyframes cursor {
+    0%,51%,100%{
+        background-color: #00ccff;
+    }
+    50%{
+        background-color: #000000;
+    }
+}
+@keyframes typing {
+    90%,100%{
+        width: 0%;
+    }
+}
+
+
+/* .text-scanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.text-layer{
+    letter-spacing: 6px;
+    font-size: 6rem;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.text-static{
+
+} */
